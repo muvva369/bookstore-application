@@ -1,0 +1,26 @@
+<form [formGroup]="signupForm" id="signupForm" (ngSubmit)="signup()"  class="jumbotron offset-4 col-md-4 body">
+    <div>
+        <h2>Welcome buddyy!!</h2>
+    </div><br/>
+    <div class=" form-group" id="uff">
+        <label for="fname">First Name</label>
+        <input id="fname" formControlName="fname" class=" form-control" type="text">
+        <label for="lname">Last Name</label>
+        <input id="lname" formControlName="lname" class=" form-control" type="text">
+        <label for="uname">User Name</label>
+        <input id="uname" formControlName="uname" class=" form-control" type="text">
+        <label for="pass">New Password</label>
+        <input id="pass" formControlName="pass" class=" form-control" type="password">
+        <div class="form-group">
+            <br/>
+            <button class=" btn btn-primary"  [disabled]="signupForm.invalid" type="submit" >SignUp</button>
+            <div *ngIf="errorMessage" class=" text-danger"><br/>
+            {{errorMessage}}
+        </div>
+        <div *ngIf="successMessage" class=" text-danger"><br/>
+            {{errorMessage}}
+            <div>Now <a [routerLink]="['/login']">Login</a> with your credentials</div>
+        </div>
+        </div>
+    </div> 
+</form> 

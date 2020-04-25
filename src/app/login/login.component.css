@@ -1,0 +1,10 @@
+.login-body{
+    color:black;
+    overflow: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('/assets/incomp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+

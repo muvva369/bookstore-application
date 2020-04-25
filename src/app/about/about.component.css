@@ -1,0 +1,21 @@
+
+.body{
+    color: aliceblue;
+}
+.title{
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+}
+.para{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+@media screen and (max-width : 760px){
+    .body{
+        /* background-size: cover; */
+        height: fit-content;
+        /* width: fit-content; */
+    }
+}

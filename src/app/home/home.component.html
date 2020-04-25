@@ -1,0 +1,74 @@
+<div class=" container-fluid ">
+    <div class=" row category-row pic">
+        <div class=" col-md-2 small-col">
+            <img src="..\assets\fiction.jpg" alt="fiction" id=fiction class=" rounded-circle"
+                (click)="getBooks('fiction')">
+            <div>fiction</div>
+        </div>
+        <div class="col-md-2  small-col">
+            <img src="..\assets\nonfiction.jpg" alt="nonfiction" id=nonfiction class=" rounded-circle"
+                (click)="getBooks('nonfiction')">
+            <div>nonfiction</div>
+        </div>
+        <div class="col-md-2 small-col">
+            <img src="..\assets\competitive.png" alt="competitive" id=competitive class=" rounded-circle"
+                (click)="getBooks('competitive')">
+            <div>competitive</div>
+        </div>
+        <div class="col-md-2  small-col">
+            <img src="..\assets\academic.png" alt="academic" id=academic class=" rounded-circle"
+                (click)="getBooks('academic')">
+            <div>academic</div>
+        </div>
+        <div class="col-md-2  small-col">
+            <img src="..\assets\school.png" alt="school" id=school class=" rounded-circle" (click)="getBooks('school')">
+            <div>school</div>
+        </div>
+        <div class="col-md-2  small-col">
+            <img src="..\assets\selfhelp.png" alt="selfhelp" id=selfhelp class=" rounded-circle"
+                (click)="getBooks('selfhelp')">
+            <div>selfhelp</div>
+        </div>
+    </div>
+    <!-- <h3>{{this.books[0].category}}:</h3> -->
+    <!-- <div id=books class=" container-fluid">
+        <h3>{{this.books[0].category}}:</h3>
+        <div class="card-deck text-center text-dark">
+            <div class="home-row row">
+                <div class="home-list-group" *ngFor="let book of this.books">
+
+                    <div class=" card col-md-6 " *ngIf="book.name">
+                        <img class=" card-img-top" src="..\assets\meluha.jpg" id=meluha class="book rounded"
+                            alt="meluha">
+                        <div class=" card-body">
+                            <div>{{book.name}}</div>
+                            <div>{{book.category}}</div>
+                            <button class=" btn btn-success" (click)="passData(book)">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="books">
+        <h3>{{category}}:</h3><br>
+        <div class=" card-deck container-fluid cat-container-fluid   text-dark">
+            <div class="list-group small-col-books list-group-flush cat-list-group" *ngFor="let book of this.books">
+                <div class="cat-card card " *ngIf="book.name">
+                    <img class=" card-img-top" src="../../assets/meluha.jpg" id=meluha class="book rounded" alt="meluha">
+                    <div class=" card-body">
+                        <div><b>{{book.name}}</b></div>
+                        <div>{{book.category}}</div>
+                        <div class="ratings">
+                            <div class="empty-stars"></div>
+                            <div class="full-stars" [ngStyle]="{width: (book.rating/5)*100}"></div>
+                          </div>
+                        <div>{{book.rating}}</div>
+                        <!-- <div>{{(Math.round(((book.rating / 5) * 100) / 10) * 10)}}%</div> -->
+                        <button class=" btn btn-success" (click)="passData(book)">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

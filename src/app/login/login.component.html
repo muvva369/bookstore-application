@@ -1,0 +1,24 @@
+
+<br/>
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="jumbotron offset-4 col-md-4 login-body">
+    <div>
+        <h2>Heyy there!!</h2>
+    </div><br/>
+    <div class=" form-group">
+        <label for="uname">User Name</label>
+        <input id="uname" formControlName="uname" class=" form-control" type="text">
+        <label for="pass">Password</label>
+        <input id="pass" formControlName="pass" class=" form-control" type="password">
+        <div class="form-group">
+            <br/>
+            <button class=" btn btn-primary" [disabled]="loginForm.invalid" type="submit">Login</button>
+            <div *ngIf="errorMessage" class=" text-danger"><br/>
+            {{errorMessage}}
+        </div>
+        <div *ngIf="successMessage" class=" text-danger"><br/>
+            {{successMessage}}
+        </div>
+        <div>New user? No Problem <a class="nav-link"[routerLink]="['/signup']"><b>SignUp here</b></a></div>
+        </div>
+    </div> 
+</form>
